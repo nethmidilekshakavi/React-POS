@@ -1,0 +1,65 @@
+.table-container {
+    padding: 30px;
+    margin: auto;
+    max-width: 800px;
+}
+
+.table-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e40af;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background-color: #f3f4f6;
+    font-weight: bold;
+    color: #111827;
+}
+
+tr:hover {
+    background-color: #f9fafb;
+}
+
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th {
+        display: none;
+    }
+
+    td {
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    td::before {
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    td:nth-of-type(1)::before { content: "ID"; }
+    td:nth-of-type(2)::before { content: "Name"; }
+    td:nth-of-type(3)::before { content: "Address"; }
+    td:nth-of-type(4)::before { content: "Date of Birth"; }
+}
